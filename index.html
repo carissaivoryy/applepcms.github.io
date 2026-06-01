@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apple PMCS Interactive Learning Webpage</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="#home" class="brand">
+      <span class="logo"></span>
+      <span data-i18n="brand">Apple PMCS</span>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="nav" class="nav">
+      <a href="#home" data-i18n="navHome">Home</a>
+      <a href="#team" data-i18n="navTeam">Team</a>
+      <a href="#history" data-i18n="navHistory">History</a>
+      <a href="#structure" data-i18n="navStructure">Structure</a>
+      <a href="#finance" data-i18n="navFinance">Finance</a>
+      <a href="#jobs" data-i18n="navJobs">Jobs</a>
+      <a href="#quiz" data-i18n="navQuiz">Quiz</a>
+      <a href="#reflection" data-i18n="navReflection">Reflection</a>
+    </nav>
+
+    <div class="tools">
+      <button id="langBtn" class="tool">中文</button>
+      <button id="themeBtn" class="tool" data-i18n="theme">Dark</button>
+      <button id="audioBtn" class="tool" data-i18n="audio">Audio</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="course">PMCS-EMI Interactive Learning Webpage</p>
+        <h1 data-i18n="heroTitle">Apple: Product Strategy, Innovation, and Career Opportunities</h1>
+        <p data-i18n="heroText" class="hero-text">Explore Apple through company history, organization, finance, project management roles, bilingual interaction, audio guide, flip cards, and quizzes.</p>
+        <div class="hero-actions">
+          <a href="#history" class="btn primary" data-i18n="start">Start Learning</a>
+          <a href="#quiz" class="btn secondary" data-i18n="quizBtn">Take Quiz</a>
+        </div>
+      </div>
+
+      <div class="iphone-card">
+        <div class="screen">
+          <span class="apple"></span>
+          <h2>Apple Inc.</h2>
+          <p data-i18n="caseText">A company built around design, hardware, software, services, and ecosystem strategy.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quick-nav">
+      <a href="#team"><b>01</b><span data-i18n="quickTeam">Team Members</span></a>
+      <a href="#history"><b>02</b><span data-i18n="quickHistory">Company History</span></a>
+      <a href="#structure"><b>03</b><span data-i18n="quickStructure">Organization</span></a>
+      <a href="#finance"><b>04</b><span data-i18n="quickFinance">Finance</span></a>
+      <a href="#jobs"><b>05</b><span data-i18n="quickJobs">Job Positions</span></a>
+      <a href="#quiz"><b>06</b><span data-i18n="quickQuiz">Interactive Quiz</span></a>
+    </section>
+
+    <section id="team" class="section">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="teamLabel">Team Members</p>
+        <h2 data-i18n="teamTitle">Meet the group behind this project</h2>
+      </div>
+      <div id="teamGrid" class="team-grid"></div>
+    </section>
+
+    <section id="history" class="section split">
+      <div>
+        <p class="eyebrow" data-i18n="historyLabel">Company History</p>
+        <h2 data-i18n="historyTitle">Four eras of Apple’s development</h2>
+        <p data-i18n="historyIntro">Apple’s story can be understood through product vision, strategic mistakes, leadership return, and the rise of its global ecosystem.</p>
+      </div>
+      <div id="historyTimeline" class="timeline"></div>
+    </section>
+
+    <section id="structure" class="section">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="structureLabel">Organizational Structure</p>
+        <h2 data-i18n="structureTitle">Business level and functional level</h2>
+        <p data-i18n="structureIntro">Apple’s product execution depends on cross-functional collaboration between engineering, design, operations, marketing, finance, services, and retail.</p>
+      </div>
+      <div class="org-grid">
+        <article class="glass-card">
+          <h3 data-i18n="businessLevel">Business Level</h3>
+          <ul>
+            <li data-i18n="business1">Hardware: iPhone, Mac, iPad, Apple Watch, AirPods</li>
+            <li data-i18n="business2">Services: iCloud, Apple Music, Apple TV+, App Store, AppleCare</li>
+            <li data-i18n="business3">Retail: Apple Store, online store, global distribution</li>
+          </ul>
+        </article>
+        <article class="glass-card">
+          <h3 data-i18n="functionalLevel">Functional Level</h3>
+          <ul>
+            <li data-i18n="function1">Engineering, product design, and software</li>
+            <li data-i18n="function2">Operations, supply chain, and manufacturing partners</li>
+            <li data-i18n="function3">Marketing, finance, HR, legal, privacy, and support</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="finance" class="section">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="financeLabel">Financial Information</p>
+        <h2 data-i18n="financeTitle">Financial snapshot</h2>
+        <p data-i18n="financeNote">Replace or verify these figures with Apple’s latest official investor report before final submission.</p>
+      </div>
+      <div class="metrics">
+        <div class="metric"><span data-i18n="metric1">Net Sales</span><b>$391.0B</b><small>FY2024</small></div>
+        <div class="metric"><span data-i18n="metric2">Operating Income</span><b>$123.2B</b><small>FY2024</small></div>
+        <div class="metric"><span data-i18n="metric3">Net Income</span><b>$93.7B</b><small>FY2024</small></div>
+        <div class="metric"><span data-i18n="metric4">Growth Driver</span><b data-i18n="services">Services</b><small data-i18n="ecosystem">Ecosystem expansion</small></div>
+      </div>
+    </section>
+
+    <section id="jobs" class="section">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="jobsLabel">Job Positions</p>
+        <h2 data-i18n="jobsTitle">Project management roles at Apple</h2>
+        <p data-i18n="jobsIntro">Apple often uses EPM and TPM roles to bridge engineering, design, operations, and business needs. Tap each card to see competencies, compensation, and benefits.</p>
+      </div>
+      <div id="jobsGrid" class="jobs-grid"></div>
+      <div class="summary-card">
+        <h3 data-i18n="generalBenefitsTitle">General Compensation and Benefits Summary</h3>
+        <ul id="benefitsList"></ul>
+      </div>
+    </section>
+
+    <section id="cards" class="section">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="cardsLabel">Flip Cards</p>
+        <h2 data-i18n="cardsTitle">Key concepts</h2>
+      </div>
+      <div class="flip-grid">
+        <div class="flip-card" tabindex="0"><div class="flip-inner"><div class="flip-front"><h3 data-i18n="flip1">EPM</h3></div><div class="flip-back"><p data-i18n="flip1Back">Engineering Program Managers connect technical teams, schedules, risks, and product execution.</p></div></div></div>
+        <div class="flip-card" tabindex="0"><div class="flip-inner"><div class="flip-front"><h3 data-i18n="flip2">TPM</h3></div><div class="flip-back"><p data-i18n="flip2Back">Technical Program Managers coordinate technical roadmaps, stakeholders, and complex systems.</p></div></div></div>
+        <div class="flip-card" tabindex="0"><div class="flip-inner"><div class="flip-front"><h3 data-i18n="flip3">Ecosystem</h3></div><div class="flip-back"><p data-i18n="flip3Back">Apple’s ecosystem connects devices, software, services, and customer loyalty.</p></div></div></div>
+      </div>
+    </section>
+
+    <section id="quiz" class="section quiz-section">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="quizLabel">Interactive Q&A</p>
+        <h2 data-i18n="quizTitle">Mini Quiz</h2>
+      </div>
+      <div class="quiz-card">
+        <p id="questionText"></p>
+        <div id="answers" class="answers"></div>
+        <p id="feedback" class="feedback"></p>
+        <button id="nextQuestion" class="btn primary" data-i18n="next">Next Question</button>
+      </div>
+    </section>
+
+    <section id="reflection" class="section split">
+      <div>
+        <p class="eyebrow" data-i18n="reflectionLabel">Teamwork & Reflection</p>
+        <h2 data-i18n="reflectionTitle">How we worked together</h2>
+      </div>
+      <p data-i18n="reflectionText">Our group focused on integration and consistency rather than only dividing tasks. We combined HR, international business strategy, finance, and computer science perspectives to build a clearer Apple case study. We reviewed the website together, tested the interactive features, and revised the content to keep it concise and easy to navigate.</p>
+    </section>
+
+    <section id="disclosure" class="section disclosure">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="disclosureLabel">AI Disclosure & Sources</p>
+        <h2 data-i18n="disclosureTitle">Academic integrity statement</h2>
+      </div>
+      <ul>
+        <li data-i18n="ai1">ChatGPT: GitHub tutorial support, website structure, coding assistance, and bilingual draft editing.</li>
+        <li data-i18n="ai2">NotebookLM: source finding and job-listing summaries for Apple project management-related positions.</li>
+        <li data-i18n="ai3">Gemini: knowledge base support and general Apple information organization.</li>
+        <li data-i18n="sourceNote">Sources to verify before final submission: Apple official website, Apple Investor Relations, Apple Careers, 104 Job Bank, and original job postings.</li>
+        <li data-i18n="designNote">Design note: the site uses RWD, short text, interactive cards, and CSS visuals to avoid broken media errors.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p data-i18n="professor">Supervising Professor: Prof. Shihmin Lo</p>
+    <p>1142 PMCS-EMI Interactive Learning Webpage Competition</p>
+  </footer>
+
+  <button id="topBtn" class="top-btn">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
