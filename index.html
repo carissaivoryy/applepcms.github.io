@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Management & Case Studies</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="logo">PMCS</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <p class="eyebrow">Course Project Website</p>
+      <h1>Project Management & Case Studies</h1>
+      <p class="hero-text">
+        A simple website for presenting course projects, team topics, weekly progress,
+        and final outcomes.
+      </p>
+      <a class="button" href="#projects">View Projects</a>
+    </section>
+  </header>
+
+  <main>
+    <section id="about" class="section two-column">
+      <div>
+        <p class="section-label">About</p>
+        <h2>About This Website</h2>
+      </div>
+      <p>
+        This website collects student project topics and short introductions.
+        Each project card can include the project title, team members, description,
+        keywords, and a link to more information.
+      </p>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-title">
+        <p class="section-label">Projects</p>
+        <h2>Project List</h2>
+      </div>
+
+      <div class="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="management">Management</button>
+        <button class="filter" data-filter="technology">Technology</button>
+        <button class="filter" data-filter="business">Business</button>
+      </div>
+
+      <div id="projectGrid" class="project-grid"></div>
+    </section>
+
+    <section id="schedule" class="section schedule">
+      <p class="section-label">Schedule</p>
+      <h2>Course Schedule</h2>
+      <div class="timeline">
+        <div><strong>Week 1–3</strong><span>Topic selection and team formation</span></div>
+        <div><strong>Week 4–8</strong><span>Research, discussion, and progress report</span></div>
+        <div><strong>Week 9–14</strong><span>Project development and revision</span></div>
+        <div><strong>Week 15–18</strong><span>Final presentation and reflection</span></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-card">
+      <p class="section-label">Contact</p>
+      <h2>Need to update the project list?</h2>
+      <p>Edit the <code>projects</code> array inside <code>script.js</code>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 PMCS Project Website. Built with HTML, CSS, and JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
