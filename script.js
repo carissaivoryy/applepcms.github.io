@@ -28,6 +28,8 @@ function applyText() {
 }
 
 function renderTeam() {
+  const photos = ["carissa.JPG", "elaine.jpg", "jason.JPG"];
+  
   $("#teamGrid").innerHTML = TEAM[lang].map((m, i) => `
     <article class="member">
       <div class="avatar">${m[0].split(" ").slice(-1)[0][0] || i+1}</div>
