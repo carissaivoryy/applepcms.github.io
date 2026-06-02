@@ -32,7 +32,7 @@ function renderTeam() {
   
   $("#teamGrid").innerHTML = TEAM[lang].map((m, i) => `
     <article class="member">
-      <div class="avatar"><img src="${photos[i]}" alt="${m[0]}"></div>
+      <div class="avatar"><img class="member-photo" src="${photos[i]}" alt="${m[0]}"></div>
       <h3>${m[0]}</h3>
       <b>${m[1]}</b>
       <p><strong>${lang === "en" ? "Expertise" : "專長"}:</strong> ${m[2]}</p>
