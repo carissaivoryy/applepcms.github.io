@@ -61,7 +61,7 @@ body {
 
   background:
     linear-gradient(rgba(245,245,247,0.82), rgba(245,245,247,0.82)),
-    url("images/apple-bg.jpg");
+    url("apple-bg.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 0 0 36px 36px;

@@ -28,7 +28,7 @@ function applyText() {
 }
 
 function renderTeam() {
-  const photos = ["Carissa.JPG", "Elaine.jpg", "Jason.JPG"];
+  const photos = ["Carissa.JPG", "Elaine.jpg", "Jason.JPG","cicis.png"];
   
   $("#teamGrid").innerHTML = TEAM[lang].map((m, i) => `
     <article class="member">
