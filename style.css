@@ -106,35 +106,21 @@ html[data-theme="dark"] .hero {
 .iphone-card { border-radius:42px; padding:12px; background:linear-gradient(135deg,#222,#777); box-shadow:var(--shadow); transform:rotate(2deg); }
 .screen { min-height:460px; border-radius:34px; background:var(--card); border:1px solid var(--line); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:30px; }
 
-
 .apple-logo-container {
   width: 90px;
   height: 90px;
   margin-bottom: 20px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
+  border-radius: 20px;
 }
-
-
-.brand .logo svg,
-.apple-logo-svg {
-  width: 100%;
-  height: 100%;
-  color: var(--text);
-  transition: color 0.25s ease;
-}
-
-
-.brand .logo {
-  width: 24px;
-  height: 24px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.apple-logo-img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  mix-blend-mode: multiply;
 }
 html[data-theme="dark"] .apple-logo-img { 
   filter: invert(1);
