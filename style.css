@@ -50,7 +50,7 @@ body {
 }
 
 .brand { display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--text); font-weight:800; }
-.logo { font-size: 1.6rem; }
+.logo { font-size: 1.5rem; line-height: 1; display: inline-block; vertical-align: middle; }
 .nav { margin-left:auto; display:flex; gap:18px; align-items:center; }
 .nav a { text-decoration:none; color:var(--muted); font-weight:650; font-size:.94rem; transition: color 0.25s ease; }
 .nav a:hover { color: var(--accent); }
@@ -105,8 +105,28 @@ html[data-theme="dark"] .hero {
 
 .iphone-card { border-radius:42px; padding:12px; background:linear-gradient(135deg,#222,#777); box-shadow:var(--shadow); transform:rotate(2deg); }
 .screen { min-height:460px; border-radius:34px; background:var(--card); border:1px solid var(--line); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:30px; }
-.apple-logo-img { width: 90px; height: auto; max-height: 110px; object-fit: contain; margin-bottom: 20px; filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.15)); }
-html[data-theme="dark"] .apple-logo-img { filter: invert(1) drop-shadow(0px 4px 12px rgba(255,255,255,0.2)); }
+
+.apple-logo-container {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+.apple-logo-img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  mix-blend-mode: multiply;
+}
+html[data-theme="dark"] .apple-logo-img { 
+  filter: invert(1);
+  mix-blend-mode: screen;
+}
+
 .screen h2 { font-size:2.5rem; margin:10px 0; }
 
 .section { max-width:1240px; margin:0 auto; padding:82px min(5vw,64px); }

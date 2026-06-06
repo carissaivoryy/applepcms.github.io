@@ -18,6 +18,7 @@ function applyText() {
   $$("[data-i18n]").forEach(el => el.textContent = t(el.dataset.i18n));
   $("#langBtn").textContent = lang === "en" ? "中文" : "EN";
   $("#themeBtn").textContent = document.documentElement.dataset.theme === "dark" ? (lang === "en" ? "Light" : "淺色") : t("theme");
+  document.title = lang === "en" ? " Apple PMCS Interactive Learning Webpage" : " Apple PMCS 互動學習網頁";
   
   if (!speaking) {
     $("#audioBtn").textContent = t("audio");
@@ -99,10 +100,8 @@ $("#langBtn").addEventListener("click", () => {
   lang = lang === "en" ? "zh" : "en";
   localStorage.setItem("lang", lang);
   qIndex = 0;
-  
   window.speechSynthesis.cancel();
   speaking = false;
-  
   applyText();
 });
 
@@ -123,32 +122,26 @@ $("#audioBtn").addEventListener("click", () => {
     alert("Speech is not supported by this browser.");
     return;
   }
-
   if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
     window.speechSynthesis.pause();
     $("#audioBtn").textContent = lang === "en" ? "Resume" : "繼續播放";
     return;
   }
-
   if (window.speechSynthesis.paused) {
     window.speechSynthesis.resume();
     $("#audioBtn").textContent = lang === "en" ? "Pause" : "暫停";
     return;
   }
-
   const baseOverview = lang === "en"
     ? "Welcome to our Apple interactive learning webpage. Here is the full guide."
     : "歡迎來到我們的 Apple 互動學習網頁。以下是完整導覽資訊。";
-
   const heroTitle = t("heroTitle");
   const heroText = t("heroText");
   const teamReflection = t("reflectionText");
-
   let teamMembersList = "";
   TEAM[lang].forEach(member => {
     teamMembersList += `${member[0]}, ${member[1]}. `;
   });
-
   const masterScript = `
     ${baseOverview}
     Headline: ${heroTitle}. 
@@ -156,31 +149,25 @@ $("#audioBtn").addEventListener("click", () => {
     Meet our project group: ${teamMembersList}
     Our collective reflection: ${teamReflection}
   `;
-
   const u = new SpeechSynthesisUtterance(masterScript);
   u.lang = lang === "en" ? "en-GB" : "zh-TW";
-
   const voices = speechSynthesis.getVoices();
   const preferred = voices.find(v => lang === "en" ? /en-GB|British|Daniel|UK/i.test(v.name + v.lang) : /zh-TW|Yating|Taiwan/i.test(v.name + v.lang));
   if (preferred) u.voice = preferred;
-
   u.onstart = () => {
     speaking = true;
     $("#audioBtn").textContent = lang === "en" ? "Pause" : "暫停";
     $("#stopAudioBtn").textContent = lang === "en" ? "Stop" : "停止";
     $("#stopAudioBtn").style.display = "inline-block";
   };
-
   u.onend = () => {
     speaking = false;
     applyText();
   };
-
   u.onerror = () => {
     speaking = false;
     applyText();
   };
-
   speechSynthesis.speak(u);
 });
 
