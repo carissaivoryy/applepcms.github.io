@@ -9,7 +9,7 @@
 <body>
   <header class="topbar">
     <a href="#home" class="brand">
-      <span class="logo"></span>
+      <span class="logo"> </span>
       <span data-i18n="brand">Apple PMCS</span>
     </a>
 
@@ -32,6 +32,7 @@
       <button id="langBtn" class="tool">中文</button>
       <button id="themeBtn" class="tool" data-i18n="theme">Dark</button>
       <button id="audioBtn" class="tool" data-i18n="audio">Audio</button>
+      <button id="stopAudioBtn" class="tool" style="display: none;">Stop</button>
     </div>
   </header>
 
@@ -49,14 +50,14 @@
 
       <div class="iphone-card">
         <div class="screen">
-          <span class="apple"></span>
+          <img src="apple.jpg" alt="Apple Logo" class="apple-logo-img" />
           <h2>Apple Inc.</h2>
           <p data-i18n="caseText">A company built around design, hardware, software, services, and ecosystem strategy.</p>
         </div>
       </div>
     </section>
 
-    <section class="section quick-nav">
+    <section class="section quick-nav reveal">
       <a href="#team"><b>01</b><span data-i18n="quickTeam">Team Members</span></a>
       <a href="#history"><b>02</b><span data-i18n="quickHistory">Company History</span></a>
       <a href="#structure"><b>03</b><span data-i18n="quickStructure">Organization</span></a>
@@ -65,7 +66,7 @@
       <a href="#quiz"><b>06</b><span data-i18n="quickQuiz">Interactive Quiz</span></a>
     </section>
 
-    <section id="team" class="section">
+    <section id="team" class="section reveal">
       <div class="section-head">
         <p class="eyebrow" data-i18n="teamLabel">Team Members</p>
         <h2 data-i18n="teamTitle">Meet the group behind this project</h2>
@@ -73,7 +74,7 @@
       <div id="teamGrid" class="team-grid"></div>
     </section>
 
-    <section id="history" class="section split">
+    <section id="history" class="section split reveal">
       <div>
         <p class="eyebrow" data-i18n="historyLabel">Company History</p>
         <h2 data-i18n="historyTitle">Four eras of Apple’s development</h2>
@@ -82,7 +83,7 @@
       <div id="historyTimeline" class="timeline"></div>
     </section>
 
-    <section id="structure" class="section">
+    <section id="structure" class="section reveal">
       <div class="section-head">
         <p class="eyebrow" data-i18n="structureLabel">Organizational Structure</p>
         <h2 data-i18n="structureTitle">Business level and functional level</h2>
@@ -108,7 +109,7 @@
       </div>
     </section>
 
-    <section id="finance" class="section">
+    <section id="finance" class="section reveal">
       <div class="section-head">
         <p class="eyebrow" data-i18n="financeLabel">Financial Information</p>
         <h2 data-i18n="financeTitle">Financial snapshot</h2>
@@ -121,7 +122,7 @@
       </div>
     </section>
 
-    <section id="jobs" class="section">
+    <section id="jobs" class="section reveal">
       <div class="section-head">
         <p class="eyebrow" data-i18n="jobsLabel">Job Positions</p>
         <h2 data-i18n="jobsTitle">Project management roles at Apple</h2>
@@ -134,7 +135,7 @@
       </div>
     </section>
 
-    <section id="cards" class="section">
+    <section id="cards" class="section reveal">
       <div class="section-head">
         <p class="eyebrow" data-i18n="cardsLabel">Flip Cards</p>
         <h2 data-i18n="cardsTitle">Key concepts</h2>
@@ -146,7 +147,7 @@
       </div>
     </section>
 
-    <section id="quiz" class="section quiz-section">
+    <section id="quiz" class="section quiz-section reveal">
       <div class="section-head">
         <p class="eyebrow" data-i18n="quizLabel">Interactive Q&A</p>
         <h2 data-i18n="quizTitle">Mini Quiz</h2>
@@ -159,7 +160,7 @@
       </div>
     </section>
 
-    <section id="reflection" class="section split">
+    <section id="reflection" class="section split reveal">
       <div>
         <p class="eyebrow" data-i18n="reflectionLabel">Teamwork & Reflection</p>
         <h2 data-i18n="reflectionTitle">How we worked together</h2>
@@ -167,7 +168,7 @@
       <p data-i18n="reflectionText">Our group focused on integration and consistency rather than only dividing tasks. We combined HR, international business strategy, finance, and computer science perspectives to build a clearer Apple case study. We reviewed the website together, tested the interactive features, and revised the content to keep it concise and easy to navigate.</p>
     </section>
 
-    <section id="disclosure" class="section disclosure">
+    <section id="disclosure" class="section disclosure reveal">
       <div class="section-head">
         <p class="eyebrow" data-i18n="disclosureLabel">AI Disclosure & Sources</p>
         <h2 data-i18n="disclosureTitle">Academic integrity statement</h2>
@@ -176,15 +177,15 @@
         <li data-i18n="ai1">ChatGPT: GitHub tutorial support, website structure, coding assistance, and bilingual draft editing.</li>
         <li data-i18n="ai2">NotebookLM: source finding and job-listing summaries for Apple project management-related positions.</li>
         <li data-i18n="ai3">Gemini: knowledge base support and general Apple information organization.</li>
-        <li data-i18n="sourceNote">Sources to verify before final submission: Apple official website, Apple Investor Relations, Apple Careers, 104 Job Bank, and original job postings.</li>
+        <li data-i18n="sourceNote">Sources to verify before final submission: Apple official website, Apple Investor Relations, Apple Careers</li>
         <li data-i18n="designNote">Design note: the site uses RWD, short text, interactive cards, and CSS visuals to avoid broken media errors.</li>
       </ul>
     </section>
   </main>
 
-  <footer>
-    <p data-i18n="professor">Supervising Professor: Prof. Shihmin Lo</p>
-    <a href="https://www.ibs.ncnu.edu.tw/index.php/faculty/tenured-professor/299-smlo" >https://www.ibs.ncnu.edu.tw/index.php/faculty/tenured-professor/299-smlo</a>
+  <footer class="reveal">
+    <p><span data-i18n="professor">Supervising Professor: Prof. Shihmin Lo</span></p>
+    <a href="https://www.ibs.ncnu.edu.tw/index.php/faculty/tenured-professor/299-smlo" target="_blank">https://www.ibs.ncnu.edu.tw/index.php/faculty/tenured-professor/299-smlo</a>
     <p>1142 PMCS-EMI Interactive Learning Webpage Competition</p>
   </footer>
 
