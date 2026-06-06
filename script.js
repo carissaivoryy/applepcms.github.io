@@ -18,7 +18,7 @@ function applyText() {
   $$("[data-i18n]").forEach(el => el.textContent = t(el.dataset.i18n));
   $("#langBtn").textContent = lang === "en" ? "中文" : "EN";
   $("#themeBtn").textContent = document.documentElement.dataset.theme === "dark" ? (lang === "en" ? "Light" : "淺色") : t("theme");
-  document.title = lang === "en" ? " Apple PMCS Interactive Learning Webpage" : " Apple PMCS 互動學習網頁";
+  document.title = lang === "en" ? " Apple PMCS Interactive Learning Webpage" : " Apple PMCS 互動學習網頁";
   
   if (!speaking) {
     $("#audioBtn").textContent = t("audio");
