@@ -50,7 +50,15 @@ body {
 }
 
 .brand { display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--text); font-weight:800; }
-.logo { font-size: 1.5rem; line-height: 1; display: inline-block; vertical-align: middle; }
+
+.logo-container {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .nav { margin-left:auto; display:flex; gap:18px; align-items:center; }
 .nav a { text-decoration:none; color:var(--muted); font-weight:650; font-size:.94rem; transition: color 0.25s ease; }
 .nav a:hover { color: var(--accent); }
@@ -107,24 +115,26 @@ html[data-theme="dark"] .hero {
 .screen { min-height:460px; border-radius:34px; background:var(--card); border:1px solid var(--line); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:30px; }
 
 .apple-logo-container {
-  width: 90px;
-  height: 90px;
-  margin-bottom: 20px;
-  overflow: hidden;
+  width: 85px;
+  height: 85px;
+  margin: 0 auto 20px auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
+  background: transparent !important;
 }
-.apple-logo-img { 
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
-  mix-blend-mode: multiply;
+
+.logo-container img,
+.apple-logo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
+
+html[data-theme="dark"] .logo-container img,
 html[data-theme="dark"] .apple-logo-img { 
   filter: invert(1);
-  mix-blend-mode: screen;
 }
 
 .screen h2 { font-size:2.5rem; margin:10px 0; }
